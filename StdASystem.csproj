@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEC0B866-839C-4344-A7A8-619A997AB629}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StdASystem</RootNamespace>
+    <AssemblyName>StdASystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Desktop\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI2">
+      <HintPath>D:\download\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.6.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net48\zxing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net48\zxing.presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllCode\ComboHelper.cs" />
+    <Compile Include="AllForms\frmAttendanceSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\frmAttendanceSystem.Designer.cs">
+      <DependentUpon>frmAttendanceSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\GeneralForms\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\GeneralForms\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\GeneralForms\frmProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\GeneralForms\frmProgram.Designer.cs">
+      <DependentUpon>frmProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\GeneralForms\frmSemester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\GeneralForms\frmSemester.Designer.cs">
+      <DependentUpon>frmSemester.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\GeneralForms\frmSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\GeneralForms\frmSession.Designer.cs">
+      <DependentUpon>frmSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\GeneralForms\frmSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\GeneralForms\frmSubject.Designer.cs">
+      <DependentUpon>frmSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\GeneralForms\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\GeneralForms\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Semester\FormSemesterPromote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Semester\FormSemesterPromote.Designer.cs">
+      <DependentUpon>FormSemesterPromote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Students\formStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Students\formStudents.Designer.cs">
+      <DependentUpon>formStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Students\frmAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Students\frmAttendance.Designer.cs">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Students\Qr_Code_generator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Students\Qr_Code_generator.Designer.cs">
+      <DependentUpon>Qr_Code_generator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\TimeTable\frmTimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\TimeTable\frmTimeTable.Designer.cs">
+      <DependentUpon>frmTimeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllReports\DailyReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AllReports\frmCustomReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllReports\frmCustomReport.Designer.cs">
+      <DependentUpon>frmCustomReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllReports\frmDailyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllReports\frmDailyReport.Designer.cs">
+      <DependentUpon>frmDailyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllReports\frmMonthlyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllReports\frmMonthlyReport.Designer.cs">
+      <DependentUpon>frmMonthlyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllReports\rpt_GetAttendanceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_GetAttendanceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AllReports\rpt_GetCustomAttendanceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_GetCustomAttendanceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Models\Dashboard1.cs" />
+    <Compile Include="Dashboard\Db\DbConnection.cs" />
+    <Compile Include="DatabaseCode\DatabaseAccess.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AllForms\frmAttendanceSystem.resx">
+      <DependentUpon>frmAttendanceSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\GeneralForms\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\GeneralForms\frmProgram.resx">
+      <DependentUpon>frmProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\GeneralForms\frmSemester.resx">
+      <DependentUpon>frmSemester.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\GeneralForms\frmSession.resx">
+      <DependentUpon>frmSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\GeneralForms\frmSubject.resx">
+      <DependentUpon>frmSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\GeneralForms\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Semester\FormSemesterPromote.resx">
+      <DependentUpon>FormSemesterPromote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Students\formStudents.resx">
+      <DependentUpon>formStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Students\frmAttendance.resx">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Students\Qr_Code_generator.resx">
+      <DependentUpon>Qr_Code_generator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\TimeTable\frmTimeTable.resx">
+      <DependentUpon>frmTimeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports\DailyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports\frmCustomReport.resx">
+      <DependentUpon>frmCustomReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports\frmDailyReport.resx">
+      <DependentUpon>frmDailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports\frmMonthlyReport.resx">
+      <DependentUpon>frmMonthlyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports\rpt_GetAttendanceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_GetAttendanceReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports\rpt_GetCustomAttendanceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_GetCustomAttendanceReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_down_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advertisement_page_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student_male_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change_user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_card_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accounting_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_symbol_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_2066.png" />
+    <None Include="Resources\Ellipse 1.png" />
+    <None Include="Resources\nas_104px.png" />
+    <None Include="Resources\school_104px.png" />
+    <None Include="Resources\student_male_104px.png" />
+    <None Include="Resources\icons8_male_user_50px.png" />
+    <None Include="Resources\icons8_student_male_52px.png" />
+    <None Include="Resources\IMG_2066.JPG" />
+    <None Include="Resources\synchronize_50px1.png" />
+    <None Include="Resources\synchronize_50px.png" />
+    <None Include="Resources\front_desk_50px.png" />
+    <None Include="logo1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\book_stack_104px.png" />
+    <Content Include="Resources\cuulogo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
